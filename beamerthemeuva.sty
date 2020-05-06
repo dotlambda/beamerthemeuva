@@ -1,0 +1,75 @@
+\mode<presentation>
+
+\usepackage{fontspec}
+\setmainfont{Tex Gyre Pagella}
+\setsansfont{Latin Modern Sans}
+\setmonofont[Scale=MatchUppercase]{Inconsolata}
+\usepackage{unicode-math}
+\setmathfont{TeX Gyre Pagella Math}
+
+\useinnertheme{default}
+\usefonttheme{serif}
+
+\setbeamertemplate{frametitle}
+{
+  \nointerlineskip
+  \begin{beamercolorbox}[
+    wd=\paperwidth,
+    dp=1.2ex,
+    leftskip=1.2ex,
+    rightskip=1.2ex,
+  ]{frametitle}
+    \vskip1.2ex
+    \nointerlineskip
+    \insertframetitle
+  \end{beamercolorbox}
+  \nointerlineskip
+}
+
+\setbeamertemplate{footline}
+{
+  \ifnum\c@framenumber=1
+  \else
+    \begin{beamercolorbox}[wd=0.95\paperwidth, right, dp=2ex]{page number}
+      \insertframenumber/\inserttotalframenumber
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[colsep=1.5pt]{lower separation line foot}
+    \end{beamercolorbox}
+  \fi
+}
+
+\AtBeginSection[]
+{
+  \begin{frame}{Overview}
+    \tableofcontents[currentsection, hideothersubsections]
+  \end{frame}
+}
+
+\setbeamerfont{title like}{shape=\scshape}
+\setbeamerfont{title}{shape=\scshape}
+\setbeamerfont{frametitle}{shape=\scshape}
+\setbeamerfont{section in head/foot}{shape=\scshape,size=\tiny}
+
+\setbeamertemplate{navigation symbols}{}
+
+% https://www.uva.nl/over-de-uva/over-de-universiteit/huisstijl/huisstijlelementen/kleur/kleur.html
+\definecolor{zwart}{HTML}{1F1D21}
+\definecolor{rood}{HTML}{BC0031}
+\definecolor{grijs15}{HTML}{DCDDDE}
+\definecolor{grijs8}{HTML}{EBEBEC}
+
+\setbeamercolor{lower separation line head}{bg=rood}
+\setbeamercolor{lower separation line foot}{bg=rood}
+\setbeamercolor{normal text}{fg=zwart, bg=white}
+\setbeamercolor{alerted text}{fg=rood}
+\setbeamercolor{example text}{fg=zwart}
+\setbeamercolor{structure}{fg=zwart}
+
+\setbeamercolor{palette tertiary}{fg=zwart, bg=grijs15}
+\setbeamercolor{palette quaternary}{fg=zwart, bg=grijs8}
+
+\setbeamercolor{frametitle}{fg=white, bg=rood}
+\setbeamercolor{block title}{fg=zwart, bg=grijs15}
+\setbeamercolor{block body}{fg=zwart, bg=grijs8}
+
+\mode<all>
